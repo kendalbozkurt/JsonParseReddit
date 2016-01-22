@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity {
-    private static final String URL="https://www.reddit.com/r/technology/.json";
+    private static final String URL="https://www.reddit.com/r/technology/top/.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
