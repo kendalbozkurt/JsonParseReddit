@@ -70,7 +70,8 @@ public class AsyncTask extends android.os.AsyncTask<String,Void,Void>  {
             String tagDatain="data";
             String tagTitle="title";
             String tagUrl="url";
-
+            String tagBlogType="link_flair_text";
+            String tagUps="ups";
             Titles titleOb=null;
             try {
                 JSONObject jsonTagData=jSon.getJSONObject(tagData);
@@ -86,7 +87,9 @@ public class AsyncTask extends android.os.AsyncTask<String,Void,Void>  {
 
 
                     String url = jSonDatain.getString(tagUrl);
-                    titleOb=new Titles(title,url);
+                    String Blogtype=jSonDatain.getString(tagBlogType);
+                    int ups=jSonDatain.getInt(tagUps);
+                    titleOb=new Titles(title,url,Blogtype,ups);
                     list.add(titleOb);
                 }
 
@@ -99,7 +102,8 @@ public class AsyncTask extends android.os.AsyncTask<String,Void,Void>  {
         List<Titles> listTitle = getTitleListFromJson(jSonTitles);
 
         for (Titles title : listTitle) {
-            Log.i(LOG_TAG, "title -> " + title.getTitle() + " | url -> " + title.getUrl());
+            Log.i(LOG_TAG, "title -> " + title.getTitle() + " | url -> " + title.getUrl()+
+                    "| Blog Type ->"+title.getBlogType()+"| Ups ->"+title.getUps());
         }
     }
 
