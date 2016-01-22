@@ -3,7 +3,7 @@ Android example
 
 ### Reddit Başlıkları
 
-Reddit "top" olan başlıkları ve urllerini log olarak gösterir.
+Reddit "top" olan başlıkları,urllerini,blog types,ups(likes) log olarak gösterir.
 
 
 ###Output
